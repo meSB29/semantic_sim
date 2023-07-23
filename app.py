@@ -31,7 +31,7 @@
 # # Save the results to a new CSV file
 # data.to_csv('output.csv', index=False)
 
-import torch
+# import torch
 from transformers import BertTokenizer, BertForSequenceClassification
 from sentence_transformers import SentenceTransformer, util
 from flask import Flask, request, jsonify
@@ -41,7 +41,7 @@ app = Flask(__name__)
 
 
 # Load the SentenceTransformer model for sentence embeddings
-model = SentenceTransformer('bert-base-nli-mean-tokens')
+model = SentenceTransformer('distilbert-base-nli-mean-tokens')
 # Load the tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
